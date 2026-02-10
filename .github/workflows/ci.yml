@@ -50,4 +50,4 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest
+          docker push vaibhavjoswal2906/fastapi-app:latest
