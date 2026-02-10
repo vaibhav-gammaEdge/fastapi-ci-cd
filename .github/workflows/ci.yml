@@ -53,5 +53,5 @@ jobs:
           context: .
           file: ./Dockerfile  # Fixed path based on your image
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest
+          tags: vaibhavjoswal2906/fastapi-app:latest
    
