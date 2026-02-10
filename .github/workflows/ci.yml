@@ -46,7 +46,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t vaibhavjoswal2906/fastapi-app:latest -f docker/Dockerfile .
+          docker build -t vaibhavjoswal2906/fastapi-app:latest  .
 
       - name: Push Docker image
         run: |
