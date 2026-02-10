@@ -47,12 +47,12 @@ async def store_request_data(request: Request, call_next):
 
 
 @app.get("/")
-def home():
+async def home():
     return {"message": "Hello"}
 
 
 @app.post("/user")
-def add_user(user: User):
+async def add_user(user: User):
     global student_id
 
     item = {
@@ -73,7 +73,7 @@ def add_user(user: User):
 
 
 @app.get("/user")
-def show():
+async def show():
     
     if not os.path.exists("data.json"):
         return {"DATA": {}}
@@ -85,7 +85,7 @@ def show():
 
 
 @app.get("/user/{userid}")
-def show_one(userid: int):
+async def show_one(userid: int):
     
     if not os.path.exists("data.json"):
         raise HTTPException(status_code=404, detail="User not found")
